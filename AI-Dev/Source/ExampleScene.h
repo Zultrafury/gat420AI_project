@@ -2,13 +2,13 @@
 #include "Scene.h"
 #include "Framebuffer.h"
 #include <memory>
-#include "Agent.h"
+#include "Cells.h"
 
 class ExampleScene : public Scene
 {
 public:
 	std::unique_ptr<Framebuffer> m_framebuffer;
-	std::vector<Agent> m_agents;
+	std::unique_ptr<Cells<bool>> m_cells;
 	
 	bool Initialize() override;
 	void Update() override;

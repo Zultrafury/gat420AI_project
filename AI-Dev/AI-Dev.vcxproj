@@ -160,6 +160,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Source\Agent.h" />
+    <ClInclude Include="Source\Cells.h" />
     <ClInclude Include="Source\Color.h" />
     <ClInclude Include="Source\ETime.h" />
     <ClInclude Include="Source\ExampleScene.h" />
@@ -172,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Agent.cpp" />
+    <ClCompile Include="Source\Cells.cpp" />
     <ClCompile Include="Source\ETime.cpp" />
     <ClCompile Include="Source\ExampleScene.cpp" />
     <ClCompile Include="Source\Framebuffer.cpp" />
