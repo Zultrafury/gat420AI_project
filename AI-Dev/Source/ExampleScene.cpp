@@ -1,13 +1,13 @@
 #include "ExampleScene.h"
 #include "Random.h"
 
-color_t white{255,255,255,255};
-color_t black{0,0,0,255};
+const color_t white{255,255,255,255};
+const color_t black{0,0,0,255};
 
 bool ExampleScene::Initialize()
 {
 	m_renderer.Initialize();
-	m_renderer.CreateWindow("Example", 800, 600);
+	m_renderer.CreateWindow("CA", 800, 600);
 
 	m_input.Initialize();
 	m_input.Update();
@@ -20,25 +20,11 @@ bool ExampleScene::Initialize()
 
 void ExampleScene::Update()
 {
-	m_time.Tick();
-	m_input.Update();
-
-	SDL_Event event;
-	while (SDL_PollEvent(&event))
-	{
-		if (event.type == SDL_QUIT)
-		{
-			m_quit = true;
-		}
-		if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE)
-		{
-			m_quit = true;
-		}
-	}
-
+	Scene::Update();
+	
 	m_cells->Write(m_cells->m_width / 2, 0, true);
 
-	int rule = 30;
+	int rule = 57;
 	for (int j = 0; j < m_cells->m_height - 1; ++j)
 	{
 		for (int i = 1; i < m_cells->m_width - 1; ++i)

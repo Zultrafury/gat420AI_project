@@ -10,7 +10,7 @@ public:
 	virtual ~Scene() {}
 
 	virtual bool Initialize() = 0;
-	virtual void Update() = 0;
+	virtual void Update();
 	virtual void Draw() = 0;
 
 	bool IsQuit() { return m_quit; }

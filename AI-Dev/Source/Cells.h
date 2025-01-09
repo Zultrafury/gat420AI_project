@@ -10,7 +10,7 @@ public:
         m_data.resize(w * h);
     }
 
-    const T& Read(int x, int y) const
+    T Read(int x, int y) const
     {
         return m_data[y * m_width + x];
     }
